@@ -7,6 +7,7 @@ from fastapi import FastAPI
 from src.utils.config import settings
 from src.utils.logger import logger
 from src.utils.database import db
+from src.api.webhook import router as webhook_router
 
 # 创建FastAPI应用
 app = FastAPI(
@@ -14,6 +15,9 @@ app = FastAPI(
     version=settings.app_version,
     debug=settings.debug
 )
+
+# 注册路由
+app.include_router(webhook_router)
 
 
 @app.on_event("startup")

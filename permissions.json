@@ -1,0 +1,15 @@
+{
+  "scopes": {
+    "tenant": [
+      "im:message:send_as_bot",
+      "im:message.p2p_msg",
+      "im:message.group_msg",
+      "im:chat:readonly",
+      "docx:document:readonly",
+      "docx:document:write"
+    ],
+    "user": [
+      "docx:document:readonly"
+    ]
+  }
+}

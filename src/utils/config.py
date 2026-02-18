@@ -27,6 +27,11 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     log_file: str = "logs/app.log"
     
+    # LLM 配置（支持 OpenAI 和 SiliconFlow）
+    llm_api_key: str = ""
+    llm_api_base: str = "https://api.openai.com/v1"
+    llm_model: str = "gpt-3.5-turbo"
+    
     # 应用配置
     app_name: str = "Feishu Diary Bot"
     app_version: str = "1.0.0"
